@@ -15,7 +15,7 @@
     "discord.js": "^11.4.2",
     "dotenv": "^6.2.0",
     "erlpack": "github:hammerandchisel/erlpack",
-    "pg": "^7.7.1"
+    "pg": "^7.13.0"
   },
   "engines": {
     "node": "10.x",

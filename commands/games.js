@@ -1,6 +1,6 @@
 module.exports = {
   name: 'games',
-  description: 'Lists all games',
+  description: 'Lists all games available to add',
   usage: 'games',
   args: false, // does this command take arguments?
   guildOnly: true, // does this command only work in a guild?

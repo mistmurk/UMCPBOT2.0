@@ -11,7 +11,9 @@ const config = require('./config/config.json')
 const client = new Discord.Client();
 
 // Initialize db
-const db = new Pool();
+const db = new Pool({
+  connectionString: process.env.DB_CONNECTION_STRING
+});
 db.connect();
 
 

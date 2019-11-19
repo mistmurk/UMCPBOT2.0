@@ -1,6 +1,6 @@
 module.exports = {
   name: 'addgame',
-  description: 'gives the user the role for a game',
+  description: 'Adds the role for a game to the user',
   usage: 'addgame <game>( <game2> <game3>...)',
   aliases: [],
   args: false, // does this command take arguments?
