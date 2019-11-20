@@ -5,6 +5,13 @@ module.exports = async (client, db, message) => {
   // Ingnore messages from bots
   if (message.author.bot) return;
 
+  // Ignore messages not in role-request and bot-commands
+  if(message.guild != '348919724635324419' ||
+     message.channel == '646521417805856768' ||
+     message.channel == '349781614877999104') {
+       return;
+     }
+
   // Check for commands
   if(message.content.startsWith(config.prefix)) {
     // Regex magic to seperate args, allowing args with spaces to be
