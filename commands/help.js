@@ -3,7 +3,7 @@ module.exports = {
   description: 'Displays information about the bot',
   usage: 'help (command)',
   aliases: [],
-  args: true, // does this command take arguments?
+  args: false, // does this command take arguments?
   guildOnly: true, // does this command only work in a guild?
   adminOnly: false, // is this command only for admins?
   async execute(client, db, message, args) {
