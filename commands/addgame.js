@@ -11,7 +11,7 @@ module.exports = {
     var failed = [];
     for(i = 0; i < args.length; i++) {
       const game = args[i].replace(/^"(.+)"$/,'$1').replace(/^'(.+)'$/,'$1');
-      const text = 'SELECT discord_id FROM aliases JOIN games ON games.id=aliases.game_id WHERE name ILIKE $1 OR alias ILIKE $1';
+      const text = 'SELECT discord_id FROM aliases FULL OUTER JOIN games ON games.id=aliases.game_id WHERE name ILIKE $1 OR alias ILIKE $1';
       var success = await db.query(text, [game])
         .then(res => {
           if(res.rowCount != 0) {
