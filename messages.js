@@ -6,11 +6,13 @@ module.exports = async (client, db, message) => {
   if (message.author.bot) return;
 
   // Ignore messages not in role-request and bot-commands
-  if(message.guild == '348919724635324419' &&
-     (message.channel != '646521417805856768' ||
-     message.channel != '349781614877999104')) {
+  if(message.guild.id == '348919724635324419' &&
+     (message.channel.id != '646521417805856768' ||
+     message.channel.id != '349781614877999104')) {
        return;
      }
+
+
 
   // Check for commands
   if(message.content.startsWith(config.prefix)) {
