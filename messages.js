@@ -7,8 +7,8 @@ module.exports = async (client, db, message) => {
 
   // Ignore messages not in role-request and bot-commands
   if(message.guild == '348919724635324419' &&
-     !(message.channel == '646521417805856768' ||
-     message.channel == '349781614877999104')) {
+     (message.channel != '646521417805856768' ||
+     message.channel != '349781614877999104')) {
        return;
      }
 
