@@ -1,6 +1,6 @@
 module.exports = {
   name: 'removegame',
-  description: 'Adds the role for a game to the user',
+  description: 'Removes the role for a game from the user',
   usage: 'removegame <game>( <game2> <game3>...)',
   aliases: [],
   args: false, // does this command take arguments?
@@ -28,7 +28,7 @@ module.exports = {
       }
     }
     if(worked.length) {
-      message.channel.send(`Removed games [${worked}] to ${message.author}`);
+      message.channel.send(`Removed games [${worked}] from ${message.author}`);
     }
     if(failed.length) {
       message.channel.send(`Failed to find games: [${failed}]`);
